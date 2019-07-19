@@ -1,0 +1,32 @@
+#headerH1 {
+    
+    color:white;
+    font-family: "MGS2";
+    background: url('https://media.giphy.com/media/l3q2XB76CaWPggiNW/giphy.gif') no-repeat;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-background-clip: text;
+    font-size: 12w;
+    text-align: center;
+    line-height:unset;
+    padding-top:2rem;
+    margin-bottom: -5vw;
+
+    &:after{
+        color:white;
+        background-color:white;
+        content: ' -web-developer';
+        font-family: 'Yellowtail';
+        font-size: 4.2vw;
+        display:inline-block;
+        -webkit-text-fill-color: none;
+        -webkit-text-stroke-color: unset;
+        -webkit-text-stroke-width: 0;
+        -webkit-background-clip: text;
+        position: absolute;
+    bottom: 5%;
+    padding-left: 1vw;
+    }
+}
