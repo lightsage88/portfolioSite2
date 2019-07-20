@@ -4,7 +4,6 @@ import { Navbar,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -14,6 +13,7 @@ import { Navbar,
   InputGroupText,
   FormInput,
   Collapse} from 'shards-react';
+  import {Link, NavLink} from 'react-router-dom'
 
 class Header extends React.Component {
 
@@ -52,29 +52,27 @@ class Header extends React.Component {
       <NavbarToggler onClick={this.toggleNavbar} />
       <Collapse open={this.state.collapseOpen} navbar>
           <Nav navbar>
-            <NavItem>
-              <NavLink active href="#">
-                Active
-              </NavLink>
+            <NavItem className="headerLinkItems">
+              <Link  to="/">
+                Home
+              </Link>
             </NavItem>
-            <NavItem>
-              <NavLink href="#" disabled>
-                Disabled
-              </NavLink>
+            <NavItem className="headerLinkItems">
+              <Link  to="/about">
+                About
+              </Link>
             </NavItem>
-            <Dropdown
-              open={this.state.dropdownOpen}
-              toggle={this.toggleDropdown}
-            >
-              <DropdownToggle nav caret>
-                Dropdown
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem>Action</DropdownItem>
-                <DropdownItem>Another action</DropdownItem>
-                <DropdownItem>Something else here</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+            <NavItem className="headerLinkItems">
+              <Link  to="/projects">
+                Projects
+              </Link>
+            </NavItem>
+            <NavItem >
+              <Link className="headerLinkItems" to="/Contact">
+                Contact
+              </Link>
+            </NavItem>
+            
           </Nav>
 
           
